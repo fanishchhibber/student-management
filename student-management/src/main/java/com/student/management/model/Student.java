@@ -33,6 +33,8 @@ public class Student implements Serializable {
     @Column(name = "class")
     private int classNumber;
 
+	@JsonIgnore
+    @Column(name = "active", columnDefinition = "boolean default true")
     private boolean active;
 
     @Min(1900)
